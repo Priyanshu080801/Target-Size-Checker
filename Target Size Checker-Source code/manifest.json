@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Target Size Checker",
+    "version": "1.0",
+    "description": "Highlight elements based on target size.",
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+      "service_worker": "combined.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["combined.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "48": "icon.png"
+    },
+    "host_permissions": ["<all_urls>"]
+  }
+  
